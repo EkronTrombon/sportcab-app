@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
   { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },
   { path: 'user-update', loadChildren: './pages/user-update/user-update.module#UserUpdatePageModule' },
-  { path: 'list', loadChildren: () => import('./pages/list/list.module').then(m => m.ListPageModule), canLoad: [ UsuarioGuard ] }
+  { path: 'send-push', loadChildren: './pages/send-push/send-push.module#SendPushPageModule', canLoad: [ UsuarioGuard ]  }
 ];
 
 @NgModule({
