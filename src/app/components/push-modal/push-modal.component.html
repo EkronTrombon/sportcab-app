@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="end">
+            <ion-button (click)="closeModal()">Close</ion-button>
+        </ion-buttons>
+        <ion-title>Message!</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            <img src="assets/img/football1.jpg">
+            <ion-card-title>{{ pushNoti.title }}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>{{ pushNoti.body }}</ion-card-content>
+    </ion-card>
+</ion-content>

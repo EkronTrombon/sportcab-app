@@ -15,17 +15,20 @@ export class AppComponent {
     {
       title: 'Home',
       url: '/home',
-      icon: 'home'
+      icon: 'home',
+      color: 'primary'
     },
     {
       title: 'Push-Notifications',
       url: '/send-push',
-      icon: 'notifications'
+      icon: 'notifications',
+      color: 'primary'
     },
     {
       title: 'User Update',
       url: '/user-update',
-      icon: 'person'
+      icon: 'person',
+      color: 'danger'
     }
   ];
 

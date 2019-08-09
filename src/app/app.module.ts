@@ -12,15 +12,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 
 import { OneSignal } from '@ionic-native/onesignal/ngx';
+import { ComponentsModule } from './components/components.module';
+import { PushModalComponent } from './components/push-modal/push-modal.component';
 
 @NgModule({
   declarations: [AppComponent],
-  entryComponents: [],
+  entryComponents: [
+    PushModalComponent
+  ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
+    ComponentsModule,
     IonicStorageModule.forRoot()
   ],
   providers: [

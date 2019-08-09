@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { SendPushPage } from './send-push.page';
+import { ComponentsModule } from '../../components/components.module';
+import { PushModalComponent } from 'src/app/components/push-modal/push-modal.component';
 
 const routes: Routes = [
   {
@@ -19,6 +21,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     RouterModule.forChild(routes)
   ],
   declarations: [SendPushPage]

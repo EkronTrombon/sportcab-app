@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
@@ -8,11 +8,11 @@
 </ion-header>
 
 <ion-content>
-    <!-- <ion-row class="top-20">
+    <ion-row class="top-20">
         <ion-col size="12" text-center>
-            <img src="assets/img/sportcab-logo.png" class="img-logo">
+            <img src="assets/img/pushnotification.png" class="img-logo">
         </ion-col>
-    </ion-row> -->
+    </ion-row>
     <ion-row class="top-20">
         <ion-col size="12" text-center>
             <ion-label>
@@ -25,11 +25,11 @@
             <ion-col>
                 <ion-list>
                     <ion-item>
-                        <ion-label>Titulo</ion-label>
+                        <ion-label position="floating">Titulo</ion-label>
                         <ion-input name="titulo" type="text" [(ngModel)]="mensaje.titulo" required></ion-input>
                     </ion-item>
                     <ion-item>
-                        <ion-label>Mensaje</ion-label>
+                        <ion-label position="floating">Mensaje</ion-label>
                         <ion-textarea name="mensaje" type="text" [(ngModel)]="mensaje.mensaje" required></ion-textarea>
                     </ion-item>
                 </ion-list>
