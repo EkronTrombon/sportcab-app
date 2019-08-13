@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { IonSlides, NavController } from '@ionic/angular';
+import { IonSlides, NavController, LoadingController } from '@ionic/angular';
 import { UsuarioService } from '../../services/usuario.service';
 import { UIServiceService } from '../../services/uiservice.service';
 import { Usuario } from '../../interfaces/interfaces';
@@ -27,7 +27,8 @@ export class LoginPage implements OnInit {
 
   constructor(private usuarioService: UsuarioService,
               private navCtrl: NavController,
-              private uiService: UIServiceService) { }
+              private uiService: UIServiceService,
+              private loadingCtrl: LoadingController) { }
 
   ngOnInit() {
     this.slides.lockSwipes(true);
@@ -37,7 +38,14 @@ export class LoginPage implements OnInit {
     if (fLogin.invalid) {
       return;
     }
+    // Añadimos un loading mientras carga el login
+    const loading = await this.loadingCtrl.create({
+      message: 'Cargando...'
+    });
+    await loading.present();
+    // Fin loading
     const valido = await this.usuarioService.login(this.loginUser.email, this.loginUser.pwd);
+    loading.dismiss();
     if (valido) {
       // Navegar al Home
       this.navCtrl.navigateRoot('/home', { animated: true });
@@ -51,7 +59,14 @@ export class LoginPage implements OnInit {
     if (fRegistro.invalid) {
       return;
     }
+    // Añadimos un loading mientras carga el registro
+    const loading = await this.loadingCtrl.create({
+      message: 'Cargando...'
+    });
+    await loading.present();
+    // Fin loading
     const valido = await this.usuarioService.registro(this.registerUser);
+    loading.dismiss();
     if (valido) {
       // Navegar al Home
       this.navCtrl.navigateRoot('/home', { animated: true });

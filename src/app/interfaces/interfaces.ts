@@ -4,6 +4,7 @@ export interface Usuario {
     email?: string;
     pwd?: string;
     avatar?: string;
+    rol?: string;
 }
 
 export interface MensajePush {
