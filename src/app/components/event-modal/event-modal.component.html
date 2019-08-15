@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar [color]="colorEvento" text-center>
+        <ion-title>{{ event.tipo }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+    <ion-card>
+        <ion-card>
+            <img src="assets/img/{{ imagenEvento }}" />
+            <div class="card-title">{{ event.titulo }}</div>
+
+            <ion-card-content>
+                <h2>{{ event.descripcion }}</h2>
+            </ion-card-content>
+
+            <ion-row no-padding>
+                <ion-col text-left>
+                    <!-- <ion-button clear small [color]="colorEvento" icon-start>
+                        <ion-icon slot="start" name='thumbs-up'></ion-icon>
+                        Confirmar
+                    </ion-button> -->
+                </ion-col>
+                <ion-col text-right>
+                    <ion-button clear small [color]="colorEvento" icon-start (click)="closeModal()">
+                        <ion-icon slot="start" name='close'></ion-icon>
+                        Cerrar
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+    </ion-card>
+</ion-content>

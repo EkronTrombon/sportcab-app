@@ -14,11 +14,15 @@ import { IonicStorageModule } from '@ionic/storage';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
 import { ComponentsModule } from './components/components.module';
 import { PushModalComponent } from './components/push-modal/push-modal.component';
+import { EventModalComponent } from './components/event-modal/event-modal.component';
+import { AddEventComponent } from './components/add-event/add-event.component';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [
-    PushModalComponent
+    PushModalComponent,
+    EventModalComponent,
+    AddEventComponent
   ],
   imports: [
     BrowserModule,

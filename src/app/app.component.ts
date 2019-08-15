@@ -13,9 +13,9 @@ import { PushNotificationService } from './services/push-notification.service';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
+      title: 'Eventos',
       url: '/home',
-      icon: 'home',
+      icon: 'calendar',
       color: 'primary'
     },
     {

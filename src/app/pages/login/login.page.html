@@ -11,12 +11,12 @@
                     <ion-row>
                         <ion-col>
                             <ion-list>
-                                <ion-item>
-                                    <ion-label>Email</ion-label>
+                                <ion-item lines="none">
+                                    <ion-label position="floating">Email</ion-label>
                                     <ion-input name="email" type="email" [(ngModel)]="loginUser.email" required></ion-input>
                                 </ion-item>
-                                <ion-item>
-                                    <ion-label>Password</ion-label>
+                                <ion-item lines="none">
+                                    <ion-label position="floating">Password</ion-label>
                                     <ion-input name="password" type="password" [(ngModel)]="loginUser.pwd" required></ion-input>
                                 </ion-item>
                             </ion-list>
@@ -56,15 +56,15 @@
                         <ion-col>
                             <ion-list>
                                 <ion-item>
-                                    <ion-label>Nombre</ion-label>
+                                    <ion-label position="floating">Nombre</ion-label>
                                     <ion-input name="nombre" type="text" [(ngModel)]="registerUser.nombre" required></ion-input>
                                 </ion-item>
                                 <ion-item>
-                                    <ion-label>Email</ion-label>
+                                    <ion-label position="floating">Email</ion-label>
                                     <ion-input name="email" type="email" [(ngModel)]="registerUser.email" required></ion-input>
                                 </ion-item>
                                 <ion-item>
-                                    <ion-label>Password</ion-label>
+                                    <ion-label position="floating">Password</ion-label>
                                     <ion-input name="password" type="password" [(ngModel)]="registerUser.pwd" required></ion-input>
                                 </ion-item>
                             </ion-list>
